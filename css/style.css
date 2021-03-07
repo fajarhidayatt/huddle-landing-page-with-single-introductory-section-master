@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:ital,wght@0,400;1,700&display=swap");
+
+/* global */
+:root {
+  --primaryColor: hsl(257, 40%, 49%);
+  --secondaryColor: hsl(300, 69%, 71%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Mobile & Tablet View */
+body {
+  background-color: var(--primaryColor);
+  background-image: url(../images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  padding: 0 35px;
+}
+
+/* header */
+header {
+  padding: 20px 0;
+}
+header .logo {
+  width: 130px;
+}
+
+/* jumbotron */
+.jumbotron {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+.jumbotron .content p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9em;
+  line-height: 1.5;
+  margin: 20px 0;
+}
+.jumbotron .content a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--primaryColor);
+  background-color: #fff;
+  padding: 10px 50px;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.jumbotron .content a:hover {
+  background-color: var(--secondaryColor);
+  color: #fff;
+}
+
+/* footer */
+footer {
+  display: flex;
+  justify-content: center;
+  margin: 80px 0 30px;
+}
+footer span {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  margin: 0 5px;
+}
+
+/* DESKTOP VIEW */
+@media (min-width: 992px) {
+  body {
+    background-image: url(../images/bg-desktop.svg);
+  }
+  .container {
+    padding: 0 80px;
+  }
+  header {
+    padding: 40px 0 60px;
+  }
+  header .logo {
+    width: 200px;
+  }
+  .jumbotron {
+    flex-direction: row;
+    text-align: left;
+    font-size: 20px;
+  }
+  .jumbotron img {
+    width: 52%;
+  }
+  .jumbotron .content {
+    padding-top: 40px;
+  }
+  .jumbotron .content a {
+    font-size: 0.8em;
+  }
+  footer {
+    justify-content: flex-end;
+    margin: 0 0 30px;
+  }
+}
